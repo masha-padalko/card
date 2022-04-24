@@ -11,6 +11,8 @@
 		display: flex;
     	flex-direction: row-reverse;
     	align-items: center;
+    	border: none;
+    	box-shadow: 0 2px 30px #000;
 	}
 
 	.card-img {
@@ -39,11 +41,20 @@
 	.card-social a {
 		justify-content: flex-start;
 		align-items: center;
-		margin-bottom: 18px;
-	} 
+		margin-bottom: 10px;
+	}
+
+	.card-social svg {
+		width: 56px;
+		height: 56px;
+	}
 
 	.card-social a:hover span{
-		color: purple;
+		color: #da4153;
+	}
+
+	.card-social a:hover svg {
+		animation: shake 2s;
 	}
 
 	.card-social span {
@@ -52,4 +63,19 @@
    		font-size: 25px;
    		margin-left: 18px;
 	}
+}
+
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+  
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+  
 }
